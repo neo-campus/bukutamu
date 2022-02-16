@@ -29,3 +29,5 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 Route::get('admin/tamu', [AdminTamuController::class, 'index'])->name('admin-tamu');
 Route::get('admin/form-tambah', [AdminTamuController::class, 'formTambah'])->name('admin-form-tambah');
 Route::post('admin/simpan-data', [AdminTamuController::class, 'simpanData'])->name('admin-simpan-data');
+Route::get('admin/form-edit/{id}',[AdminTamuController::class, 'formEdit'])->name('admin-form-edit');
+Route::post('admin/update-data',[AdminTamuController::class, 'updateTamu'])->name('admin-update-data');

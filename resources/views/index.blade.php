@@ -66,6 +66,10 @@
                                         class="form-control btn btn-primary rounded submit px-3">Simpan</button>
                                 </div>
 
+                               <div class="mt-5">
+                                   <a href="{{url('dashboard')}}">Dashboard</a>
+                               </div>
+
                             </form>
 
                         </div>

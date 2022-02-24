@@ -61,4 +61,12 @@ class TamuController extends Controller
         return redirect('admin/tamu')->with('status', 'Data Berhasil DiUpdate');
     }
 
+    public function hapusTamu(Request $request){
+        $id = $request->id;
+        $data = User::find($id);
+        $data->delete();
+        return redirect('admin/tamu')->with('status', 'Data Berhasil DiHapus');
+    }
+
+
 }

@@ -18,7 +18,7 @@
                     <th scope="col">Telepon</th>
                     <th scope="col">Email</th>
                     <th scope="col">Alamat</th>
-                    <th scope="col">Aksi</th>
+                    <th scope="col" style="width: 15%">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -30,8 +30,18 @@
                             <td>{{ $item->alamat}}</td>
                             <td>{{ $item->email}}</td>
                             <td>
-                                <a href="{{url('admin/form-edit', $item->id)}}" class="btn btn-warning"> Edit</a>
-                                <a href="" class="btn btn-danger"> Hapus</a>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="{{url('admin/form-edit', $item->id)}}" class="btn btn-warning"> Edit</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <form action="{{url('admin/hapus-data')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$item->id}}">
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

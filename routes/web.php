@@ -31,3 +31,4 @@ Route::get('admin/form-tambah', [AdminTamuController::class, 'formTambah'])->nam
 Route::post('admin/simpan-data', [AdminTamuController::class, 'simpanData'])->name('admin-simpan-data');
 Route::get('admin/form-edit/{id}',[AdminTamuController::class, 'formEdit'])->name('admin-form-edit');
 Route::post('admin/update-data',[AdminTamuController::class, 'updateTamu'])->name('admin-update-data');
+Route::post('admin/hapus-data', [AdminTamuController::class, 'hapusTamu'])->name('admin-hapus-data');
